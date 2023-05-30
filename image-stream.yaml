@@ -1,0 +1,12 @@
+kind: "ImageStream"
+apiVersion: "image.openshift.io/v1"
+metadata:
+  name: "test-deployment"
+  namespace: "test-deployment"
+spec:
+  dockerImageRepository: "alex-ecc/test-deployment"
+status:
+  dockerImageRepository: "alex-ecc/test-deployment"
+  tags:
+  - items:
+    tag: "latest"

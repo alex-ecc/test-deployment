@@ -45,6 +45,7 @@ public class Main {
             System.out.println("[" + Instant.now() + "] Got server request.");
             String response = "Hallo Welt!";
             exchange.getResponseHeaders().add("Content-Type", "text/plain");
+            exchange.getResponseHeaders().add("Server", "Not Apache");
             exchange.sendResponseHeaders(200, response.length());
             OutputStream responseBody = exchange.getResponseBody();
             responseBody.write(response.getBytes(StandardCharsets.UTF_8));
